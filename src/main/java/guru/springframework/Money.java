@@ -22,10 +22,6 @@ public class Money {
     return new Franc(amount, "CHF");
   }
 
-  public Money times(int multiplier){
-    return null;
-  }
-
   @Override
   public boolean equals(Object object) {
     Money money = (Money) object;
@@ -40,5 +36,9 @@ public class Money {
         "amount=" + amount +
         ", currency='" + currency + '\'' +
         '}';
+  }
+
+  public Money times(int multiplier) {
+    return new Money(amount * multiplier, this.currency);
   }
 }
