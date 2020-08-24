@@ -6,8 +6,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import org.junit.jupiter.api.Test;
 
 // $5 + 10 CHF = $10 (with rate of 2:1)
-// $5 + $5 = $10
+// $5 + $5 = $10 (DONE)
 // $5 * 2 = $10 (DONE)
+// return $5 + 5 CHF
+// Reduce Money with Conversion (DONE)
 // Bank.reduce(Money) (DONE)
 // Make “amount” private (DONE)
 // Dollar side effects? (DONE)
@@ -94,5 +96,15 @@ public class MoneyTest {
     Bank bank = new Bank();
     Money result = bank.reduce(Money.dollar(1), "USD");
     assertEquals(Money.dollar(1), result);
+  }
+
+  @Test
+  void mixed_addition() {
+    Money fiveBucks = Money.dollar(5);
+    Money tenFrancs = Money.franc(10);
+    Bank bank = new Bank();
+    bank.addRate("CHF", "USD", 2);
+    Money result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
+    assertEquals(Money.dollar(10), result);
   }
 }
