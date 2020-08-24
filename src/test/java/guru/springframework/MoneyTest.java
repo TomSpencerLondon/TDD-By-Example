@@ -4,11 +4,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-//$5 + 10 CHF = $10 (with rate of 2:1)
-//    • $5 * 2 = $10
-//    • Make “amount” private
-//• Dollar side effects?
-//    • Money Rounding?
+// $5 + 10 CHF = $10 (with rate of 2:1)
+// $5 * 2 = $10 (DONE)
+// Make “amount” private
+// Dollar side effects? (DONE)
+// Money Rounding?
 
 public class MoneyTest {
 
