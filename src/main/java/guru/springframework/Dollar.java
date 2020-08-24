@@ -2,13 +2,13 @@ package guru.springframework;
 
 public class Dollar {
 
-  public final int amount;
+  public int amount;
 
   public Dollar(int amount) {
     this.amount = amount;
   }
 
-  public void times(int amount) {
-    throw new UnsupportedOperationException("Implement me!");
+  public void times(int multiplier) {
+    amount = amount * 2;
   }
 }
