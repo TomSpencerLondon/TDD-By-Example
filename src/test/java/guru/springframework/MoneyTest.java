@@ -43,5 +43,6 @@ public class MoneyTest {
   void equality() {
     assertEquals(new Dollar(5), new Dollar(5));
     assertNotEquals(new Dollar(5), new Dollar(8));
+    assertNotEquals(new Dollar(5), new Franc(5));
   }
 }
