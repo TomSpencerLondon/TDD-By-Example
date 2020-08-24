@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
 // 5 CHF * 2 = 10 CHF (DONE)
 // Dollar / Franc Duplication
 // Common Equals (DONE)
-// Common times
+// Common times (DONE)
 // Compare francs with dollars (DONE)
 // Currency (DONE)
 // Delete testFrancMultiplication
@@ -45,5 +45,14 @@ public class MoneyTest {
   void currency() {
     assertEquals("USD", Money.dollar(1).currency());
     assertEquals("CHF", Money.franc(1).currency());
+  }
+
+  @Test
+  void simple_addition() {
+    Money five = Money.dollar(5);
+    Expression sum = five.plus(five);
+    Bank bank = new Bank();
+    Money reduced = bank.reduce(sum, "USD");
+    assertEquals(Money.dollar(10), reduced);
   }
 }
