@@ -76,6 +76,20 @@ public class MoneyTest {
   }
 
   @Test
+  void reduce_money_different_currency() {
+    Bank bank = new Bank();
+    bank.addRate("CHF", "USD", 2);
+    Money result = bank.reduce(Money.franc(2), "USD");
+    assertEquals(Money.dollar(1), result);
+  }
+
+  @Test
+  void test_identity_rate() {
+    assertEquals(1, new Bank().rate("USD", "USD"));
+    assertEquals(1, new Bank().rate("CHF", "CHF"));
+  }
+
+  @Test
   void reduce_money() {
     Bank bank = new Bank();
     Money result = bank.reduce(Money.dollar(1), "USD");
