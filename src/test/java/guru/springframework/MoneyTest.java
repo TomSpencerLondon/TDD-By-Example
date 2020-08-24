@@ -17,6 +17,7 @@ import org.junit.jupiter.api.Test;
 // Dollar / Franc Duplication
 // Common Equals
 // Common times
+// Compare francs with dollars
 
 public class MoneyTest {
 
