@@ -10,7 +10,9 @@ public abstract class Money {
     this.currency = currency;
   }
 
-  protected abstract String currency();
+  protected String currency(){
+    return currency;
+  }
 
   public static Money dollar(int amount) {
     return new Dollar(amount, "USD");
