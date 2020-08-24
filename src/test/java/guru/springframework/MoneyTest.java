@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 // $5 + 10 CHF = $10 (with rate of 2:1)
 // $5 + $5 = $10
 // $5 * 2 = $10 (DONE)
+// Bank.reduce(Money) (DONE)
 // Make “amount” private (DONE)
 // Dollar side effects? (DONE)
 // Equals (DONE)
