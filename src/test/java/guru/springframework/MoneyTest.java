@@ -14,11 +14,11 @@ import org.junit.jupiter.api.Test;
 // Equal null
 // Money Rounding?
 // 5 CHF * 2 = 10 CHF (DONE)
-// Dollar / Franc Duplication (DONE)
+// Dollar / Franc Duplication
 // Common Equals (DONE)
 // Common times
 // Compare francs with dollars (DONE)
-// Currency
+// Currency (DONE)
 // Delete testFrancMultiplication
 
 public class MoneyTest {
