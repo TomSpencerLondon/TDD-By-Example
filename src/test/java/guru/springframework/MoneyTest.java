@@ -1,6 +1,7 @@
 package guru.springframework;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,6 +9,9 @@ import org.junit.jupiter.api.Test;
 // $5 * 2 = $10 (DONE)
 // Make “amount” private
 // Dollar side effects? (DONE)
+// Equals (DONE)
+// HashCode
+// Equal null
 // Money Rounding?
 
 public class MoneyTest {
@@ -16,8 +20,14 @@ public class MoneyTest {
   void multiplication() {
     Dollar five = new Dollar(5);
     Dollar product = five.times(2);
-    assertEquals(10, product.amount);
+    assertEquals(new Dollar(10), product);
     product = five.times(3);
-    assertEquals(15, product.amount);
+    assertEquals(new Dollar(15), product);
+  }
+
+  @Test
+  void equality() {
+    assertEquals(new Dollar(5), new Dollar(5));
+    assertNotEquals(new Dollar(5), new Dollar(8));
   }
 }
