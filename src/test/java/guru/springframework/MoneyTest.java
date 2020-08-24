@@ -8,14 +8,14 @@ import org.junit.jupiter.api.Test;
 // $5 + 10 CHF = $10 (with rate of 2:1)
 // $5 + $5 = $10 (DONE)
 // $5 * 2 = $10 (DONE)
-// return $5 + 5 CHF
-// Sum.plus
-// Expression.times
+// return $5 + 5 CHF (DONE)
+// Sum.plus (DONE)
+// Expression.times (DONE)
 // Reduce Money with Conversion (DONE)
 // Bank.reduce(Money) (DONE)
 // Make “amount” private (DONE)
 // Dollar side effects? (DONE)
-// Equals (DONE)
+// Equals
 // HashCode
 // Equal null Equal Object
 // Money Rounding?
@@ -25,7 +25,7 @@ import org.junit.jupiter.api.Test;
 // Common times (DONE)
 // Compare francs with dollars (DONE)
 // Currency (DONE)
-// Delete testFrancMultiplication
+// Delete testFrancMultiplication (DONE)
 
 public class MoneyTest {
 
