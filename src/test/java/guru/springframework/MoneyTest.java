@@ -13,7 +13,10 @@ import org.junit.jupiter.api.Test;
 // HashCode
 // Equal null
 // Money Rounding?
-// 5 CHF * 2 = 10 CHF
+// 5 CHF * 2 = 10 CHF (DONE)
+// Dollar / Franc Duplication
+// Common Equals
+// Common times
 
 public class MoneyTest {
 
