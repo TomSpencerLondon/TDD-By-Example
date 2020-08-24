@@ -9,13 +9,15 @@ import org.junit.jupiter.api.Test;
 // $5 + $5 = $10 (DONE)
 // $5 * 2 = $10 (DONE)
 // return $5 + 5 CHF
+// Sum.plus
+// Expression.times
 // Reduce Money with Conversion (DONE)
 // Bank.reduce(Money) (DONE)
 // Make “amount” private (DONE)
 // Dollar side effects? (DONE)
 // Equals (DONE)
 // HashCode
-// Equal null
+// Equal null Equal Object
 // Money Rounding?
 // 5 CHF * 2 = 10 CHF (DONE)
 // Dollar / Franc Duplication
@@ -106,5 +108,16 @@ public class MoneyTest {
     bank.addRate("CHF", "USD", 2);
     Money result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
     assertEquals(Money.dollar(10), result);
+  }
+
+  @Test
+  void sum_plus_money() {
+    Money fiveBucks = Money.dollar(5);
+    Money tenFrancs = Money.franc(10);
+    Bank bank = new Bank();
+    bank.addRate("CHF", "USD", 2);
+    Expression sum = new Sum(fiveBucks, tenFrancs).plus(fiveBucks);
+    Money result = bank.reduce(sum, "USD");
+    assertEquals(Money.dollar(15), result);
   }
 }
